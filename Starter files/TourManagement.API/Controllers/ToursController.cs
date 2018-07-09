@@ -55,7 +55,7 @@ namespace TourManagement.API.Controllers
         [RequestHeaderMatchedMediaType("Accept", new[] { "application/vnd.marvin.tourwithestimatedprofits+json" })]
         public async Task<IActionResult> GetTourWithEstimatedProfits(Guid tourId)
         {
-            return await GetSpecificTour<Tour>(tourId);
+            return await GetSpecificTour<TourWithEstimatedProfits>(tourId);
         }
 
         private async Task<IActionResult> GetSpecificTour<T>(Guid tourId) where T : class
@@ -67,7 +67,8 @@ namespace TourManagement.API.Controllers
                 return BadRequest();
             }
 
-            return Ok(Mapper.Map<T>(tourFromRepo));
+            var tourDto = Mapper.Map<T>(tourFromRepo);
+            return Ok(tourDto);
         }
     }
 }

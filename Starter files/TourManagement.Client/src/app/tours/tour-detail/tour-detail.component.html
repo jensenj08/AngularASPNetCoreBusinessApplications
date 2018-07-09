@@ -16,6 +16,8 @@
                     <div class="col-md-2">Ends on:</div>
                     <div class="col-md-10">{{tour.endDate|date:'MM/dd/yyyy'}}</div>
                 </div>
+                
+                <!-- only show estimated profits if the field exists --> 
                 <div class="row" *ngIf='tour.estimatedProfits' style="margin-top:10px;" >
                     <div class="col-md-2">Estimated profits:</div>
                     <div class="col-md-10">{{tour.estimatedProfits}}</div>
