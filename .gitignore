@@ -1,6 +1,9 @@
-﻿################################################################################
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
 /.vs
 /Finished sample/Marvin.IDP/obj
+Starter files/.vs/
+Starter files/TourManagement.API/bin/
+Starter files/TourManagement.API/obj/
